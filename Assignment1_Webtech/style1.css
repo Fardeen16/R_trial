@@ -1,0 +1,412 @@
+
+h1, h2, h3, h4, h5, h6, blockquote{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100; 
+}
+
+
+body, p, a, li, cite, span, .features , footer, .nav-links a {
+    font-family: 'Mingzat', sans-serif;
+}
+
+.header {
+    background-color: #fff;
+    height: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 200px;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 400px;
+    padding-left: 110px;
+}
+
+.nav span{
+
+    font-size: 13px;
+    font-weight: 100;
+    color: #000;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #888;
+    opacity: 0.5;
+    font-size: 12px;
+    
+}
+
+main {
+    margin-top: 30px;
+}
+
+.hero {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    width:1600px;
+    align-items: center;
+    background-image: url('/images/lawyer.jpg');
+    /* background-size: 1600px 853px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+
+
+}
+
+
+.overlay {
+    background-color: rgb(11, 63, 115);
+    align-items: left;
+    color: #ffffff;
+    padding: 40px;
+    max-width: 400px;
+    transform: translate(-300px, -60px);
+    height: 290px;
+    width: 250px;
+    padding-top: 30px;
+    margin-top: 150px;
+}
+
+.overlay h1 {
+    font-size: 16px;
+}
+
+.overlay h2 {
+    font-size: 24px;
+    margin-top: -10px;
+}
+
+.overlay p {
+    color: yellow;
+    font-size:12px;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;    
+    width: 120px;
+    font-size:10px;
+
+
+}
+
+.button1 {
+    padding: 10px;
+    background-color: #3d4a8d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color:rgb(12,60,93)
+}
+
+
+
+.features {
+    display: flex;
+    height: 250px;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #ffffffdc;
+}
+
+.feature {
+    max-width: 250px;
+    text-align: left;
+    font-size: 8px; 
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 45px;
+    font-weight: 100; 
+    line-height: 1.5;
+    color: #888;
+    height: 160px;
+
+    
+}
+
+.feature h3 {
+    font-weight: 200; 
+    font-size: 16px; 
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.feature p {
+    margin: 0;
+    max-width: 260px;
+    font-size: 10px;
+}
+
+.testimonial {
+
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 40px 40px;
+    background-color: #efefef;
+
+}
+
+.testimonial blockquote {
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: 100;
+    
+}
+
+.testimonial h3 {
+    font-size: 11px;
+    margin: 0 0 10px;
+    font-weight: 100;
+}
+
+.testimonial strong {
+    font-weight: bold;
+}
+
+
+
+
+.pricing {
+    padding: 50px 20px;
+    background-color: #fff;
+
+    background-image: url("/images/glasses.png");
+    filter: grayscale(70%);
+    height: 68vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    background-color: #e3e3e3;
+    background-blend-mode: overlay;
+
+   
+}
+
+
+.gap{
+
+    display: grid;
+    text-align: center;
+    box-sizing: border-box;
+  grid-auto-flow: column;
+  grid-gap: 80px;
+    justify-content: center;
+}
+
+.plan {
+    width: 160px;
+    height: 20px;
+    margin-bottom: 0px;
+    height: fit-content;
+    background-color: #f9f9f9;
+    padding: 80px;
+    padding-block: 100px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 150px;
+
+    background-image: 
+        linear-gradient(0deg, rgb(255, 231, 231) 1px, transparent 0.5px),
+        linear-gradient(90deg, rgb(255, 231, 231) 1px, transparent 0.5px),
+        repeating-linear-gradient(45deg,rgb(255, 231, 231) 10px, rgb(255, 231, 231) 10px, transparent 11px,transparent 20px),
+        repeating-linear-gradient(-45deg, rgb(255, 231, 231) 10px, rgb(255, 231, 231) 10px, transparent 11px,transparent 20px);
+
+
+    /* background-size: 20px 20px, 20px 20px, 28.28px 28.28px, 28.28px 28.28px; */
+    background-size: 0.9rem 0.9rem;
+}
+
+.plan h4 {
+    margin: 0 0 10px;
+    width: 160px;
+    height: 20px;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.plan ul li {
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+.plan button{
+
+    color:#4b4ba9e6
+}
+
+
+.plan p{
+
+font-size: 20px;
+line-height: 1.5;
+}
+
+.plan h3{
+    font-size:13px;
+    background-color: rgb(12,60,93);
+    color: white;
+    width: 130px;
+  height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    width: 130px;
+  height: 35px;
+  padding-top: 14px;
+  margin-left: 10px;
+}
+
+
+
+.hero1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52vh;
+    
+    background-image: url('/images/notebook.jpg');
+    background-size: cover;
+    background-position: center;
+
+    filter:brightness(80%);
+
+}
+
+.hero1_overlay{
+
+    height: 52vh;
+    width: 100%;
+
+    background-color:rgb(36,73,98,0.85);
+    background-blend-mode: overlay;
+
+}
+
+
+
+.cta {
+    color: #fff;
+    text-align: center;
+    padding: -20px -20px;
+    padding-top: 130px;
+
+}
+
+.cta p {
+    font-size: 12px;
+    margin-top: -1px;
+}
+
+
+.cta h1{
+
+
+    margin-bottom: 1px;
+
+
+}
+.cta h2 {
+    background-color: #ffcc00;
+     width: 150px;
+     height: 20px;
+     margin-left: 600px;
+
+    color:#000;
+    padding: 10px 20px;
+    font-size: 15px;
+    position: relative;
+    text-align: center;
+    left: 100px;
+    align-items: center;
+}
+
+.pricings{
+    margin-top: -50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.pricings h2 {
+    margin-left: 530px;
+    width: 500px;
+    height: 90px;
+    height: 40px;
+
+    font-size: 12px;
+}
+.pricings h1{
+
+font-size: 22px;
+
+}
+
+
+.endl{
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    background-color:rgba(29,37,48);
+    height: 20vh;
+    padding-top: 80px;
+
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.endl h2 {
+    font-size: 15px;
+}
+
+.endl p {
+    font-size: 10px;
+    color:rgb(181, 175, 175);
+    line-height: 0.5; 
+}
+
+.social-icons img {
+    
+    width: 30px; 
+    height: 30px; 
+    margin: 0 10px; 
+    vertical-align: middle; 
+}
