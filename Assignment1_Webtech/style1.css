@@ -55,7 +55,7 @@ main {
     height: 700px;
     width:1600px;
     align-items: center;
-    background-image: url('/images/lawyer.jpg');
+    background-image: url("images/lawyer.jpg");
     /* background-size: 1600px 853px; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -201,7 +201,7 @@ button {
     padding: 50px 20px;
     background-color: #fff;
 
-    background-image: url("/images/glasses.png");
+    background-image: url("images/glasses.png");
     filter: grayscale(70%);
     height: 68vh;
     background-attachment: fixed;
@@ -301,7 +301,7 @@ line-height: 1.5;
     align-items: center;
     height: 52vh;
     
-    background-image: url('/images/notebook.jpg');
+    background-image: url("images/notebook.jpg");
     background-size: cover;
     background-position: center;
 
