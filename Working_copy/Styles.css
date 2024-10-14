@@ -1,0 +1,658 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+
+#state{
+    width: 100%;
+}
+
+#container {
+    height: 400px;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main container for the chart */
+#container2 {
+    max-width: 800px;
+    min-width: 380px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+/* Loading spinner or message */
+#loading {
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* Highcharts figure styling */
+.highcharts-figure2,
+.highcharts-data-table2 table {
+    min-width: 350px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+/* Table styling for weather data */
+.highcharts-data-table2 table {
+    font-family: 'Arial', sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fafafa;
+}
+
+/* Caption for the data table */
+.highcharts-data-table2 caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Table header styling */
+.highcharts-data-table2 th {
+    font-weight: bold;
+    padding: 0.5em;
+    background-color: #f5f5f5;
+}
+
+/* Table cells styling */
+.highcharts-data-table2 td,
+.highcharts-data-table2 th,
+.highcharts-data-table2 caption {
+    padding: 0.7em;
+}
+
+/* Even row background color for better readability */
+.highcharts-data-table2 thead tr,
+.highcharts-data-table2 tr:nth-child(even) {
+    background: #f0f0f0;
+}
+
+/* Hover effect on rows */
+.highcharts-data-table2 tr:hover {
+    background: #e0e6f1;
+}
+
+/* Ensure the container has the right spacing */
+.highcharts-figure2 {
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #container2 {
+        height: 300px;
+    }
+
+    .highcharts-data-table2 table {
+        max-width: 100%;
+        font-size: 0.9em;
+    }
+}
+
+/* Tooltip styling (if needed) */
+.highcharts-tooltip {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Updated CSS */
+#daily-details {
+    text-align: center;
+    color: #666;
+}
+
+.daily-weather-details h2
+{ font-size: 3rem;
+  font-weight: lighter; }
+
+/* Weather Card Styling */
+.weather-card {
+    width: fit-content;
+    margin-left: 0px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 700px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.weather-card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-weather img {
+    margin-right: 10px; /* Adds space between the image and the temperature text */
+}
+
+.current-weather h1 {
+    margin: 0; /* Removes any default margin from the heading */
+}
+
+.weather-card .current-weather img {
+    margin: 10px 0;
+    width: 60px; /* Adjust the size of the icon */
+}
+
+.weather-card h1 {
+    text-align: right;
+    font-size: 6.9rem;
+    margin: 10px 0;
+    color: #333;
+    padding-right: 2rem;
+    font-weight: initial;
+}
+
+.weather-card p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Weather Details Styling */
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.weather-details div {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.weather-details div img {
+    width: 24px; /* Adjust the size of icons */
+}
+
+.weather-details div p {
+    margin: 5px 0;
+}
+
+/* Forecast Table Container */
+.forecast-table-container {
+    width: 80%;
+    margin: 40px auto;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+
+
+
+
+
+
+
+/* #forecast-table:hover{
+    cursor: grab;
+} */
+
+tbody:hover{  
+  cursor: grab;
+}
+
+/* Forecast Table Styling */
+table {
+    border-collapse: separate;
+    width: 60rem;
+    border-spacing: 0 0.5rem;
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4F6FAD;
+    color: black;
+    text-align: center;
+
+}
+
+td {
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center;
+}
+
+/* Weather Icon in Forecast */
+td img {
+    width: 30px; /* Adjust icon size */
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Card Shadow */
+.weather-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Styling */
+header {
+    margin: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .weather-card {
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    .forecast-table-container {
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+
+
+.weather-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.weather-card {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Add smooth transition */
+  }
+  
+  .weather-card:hover {
+    box-shadow: 3px 3px 8px 10px rgba(0, 0, 0, 0.2);/* Larger drop shadow on hover */
+  }
+  
+
+.forecast-table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+/*
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px 0;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4F6FAD;
+    color: black;
+    text-align: center;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+.weather-search {
+    max-width: 470px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-image: url('static/Images/banner.jpg');
+    padding: 20px;
+    text-align: left;
+    background-size: contain;
+   background-repeat: no-repeat;
+   font-size: 10px;
+
+   padding-right: 0px;
+   border-right-width: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;
+
+}
+
+
+h1 {
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+p {
+    color: #666;
+    font-size: 13px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #4a90e2;
+}
+
+input[type="text"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.city-state {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-group {
+    width: 48%;
+}
+
+button {
+    padding: 0.8rem;;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit {
+    background-color: #4e6fad;
+    color: rgb(255, 255, 255);
+}
+
+#clearButton {
+    background-color: #f39c12;
+    color: white;
+}
+
+.geo-location {
+    text-align: left;
+}
+
+
+.results {
+    margin-top: 20px;
+}
+
+.weather-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* Container for the weather card */
+.weather-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+.highcharts-label highcharts-series-label highcharts-series-label-0 highcharts-color-none{
+    display: none;
+}
+
+/* Weather card styling */
+.weather-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-grid;
+    text-align: center;
+    
+}
+
+#daily-card{
+    color: white;
+    background: linear-gradient(to bottom, #fff,#324a7b );
+    height: 28rem;
+}
+
+
+
+.weather-card h2 {
+    color: #374d78;
+    padding-bottom: 0.2rem;  
+    text-align: left;
+    margin: 0;
+}
+
+#temptext{
+    font-size: 2.5rem;
+}
+
+input:disabled, select:disabled {
+    background-color: #e0e0e0; /* Light grey background */
+    color: #6c757d; /* Grey text */
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+}
+
+
+
+
+.weather-card .weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.weather-card .weather-info div {
+    text-align: center;
+    margin: 10px;
+}
+
+/* Weather attribute icons */
+.weather-card .weather-attribute {
+    font-size: 24px;
+}
+
+.weather-card .attribute-value {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.aligned-text {
+    display: flex;
+    flex-direction: column;       /* Stack the items vertically */
+    align-items: center;          /* Center the text horizontally */
+    text-align: left;             /* Align text to the left */
+    gap: 5px;                     /* Add some spacing between each row */
+}
+
+.aligned-text p {
+    display: flex;
+    width: 21rem;                   /* Fixed width for alignment */
+    font-feature-settings: "tnum";  /* Enable tabular numbers for consistent alignment */
+    font-variant-numeric: tabular-nums;
+    color: white;
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.aligned-text span {
+    flex: 0 0 150px;             /* Fixed width for labels */
+    text-align: right;           /* Align labels to the right */
+    padding-right: 10px;         /* Add some space between label and value */
+}
+
+
+
+
+
+
+
+
+.weather-info {
+    display: flex;           /* Makes the container a flexbox */
+    align-items: center;      /* Aligns items vertically in the center */
+    gap: 10px;                /* Space between the image and text */
+}
+
+.weather-text h2 {
+    
+    
+    margin: 5px 0;  /* Add some space between each heading */
+}
