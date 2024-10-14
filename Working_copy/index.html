@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Directly reference the CSS file from the same folder -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+
+<body>
+    <div class="weather-search">
+        <div class="header">
+            <h1>Weather Search</h1>
+            <p>Fill out the form to get weather info!</p>
+        </div>
+        <form id="weatherForm">
+            <div class = field-state>
+                <label for="street">Street*</label>
+                <input type="text" id="street" name="street" required>
+            </div>
+            
+            <div class="city-state">
+                <div class="field-group">
+                    <label for="city">City*</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="field-group">
+                    <label for="state">State*</label>
+                    <select id="state" name="state" required>
+                        <option value="" disabled selected>Select your state</option>
+                        <!-- USA States List -->
+                        <option value="AL">Alabama (AL)</option>
+                        <option value="AK">Alaska (AK)</option>
+                        <option value="AZ">Arizona (AZ)</option>
+                        <option value="AR">Arkansas (AR)</option>
+                        <option value="CA">California (CA)</option>
+                        <option value="CO">Colorado (CO)</option>
+                        <option value="CT">Connecticut (CT)</option>
+                        <option value="DE">Delaware (DE)</option>
+                        <option value="DC">District of Columbia (DC)</option>
+                        <option value="FL">Florida (FL)</option>
+                        <option value="GA">Georgia (GA)</option>
+                        <option value="HI">Hawaii (HI)</option>
+                        <option value="ID">Idaho (ID)</option>
+                        <option value="IL">Illinois (IL)</option>
+                        <option value="IN">Indiana (IN)</option>
+                        <option value="IA">Iowa (IA)</option>
+                        <option value="KS">Kansas (KS)</option>
+                        <option value="KY">Kentucky (KY)</option>
+                        <option value="LA">Louisiana (LA)</option>
+                        <option value="ME">Maine (ME)</option>
+                        <option value="MD">Maryland (MD)</option>
+                        <option value="MA">Massachusetts (MA)</option>
+                        <option value="MI">Michigan (MI)</option>
+                        <option value="MN">Minnesota (MN)</option>
+                        <option value="MS">Mississippi (MS)</option>
+                        <option value="MO">Missouri (MO)</option>
+                        <option value="MT">Montana (MT)</option>
+                        <option value="NE">Nebraska (NE)</option>
+                        <option value="NV">Nevada (NV)</option>
+                        <option value="NH">New Hampshire (NH)</option>
+                        <option value="NJ">New Jersey (NJ)</option>
+                        <option value="NM">New Mexico (NM)</option>
+                        <option value="NY">New York (NY)</option>
+                        <option value="NC">North Carolina (NC)</option>
+                        <option value="ND">North Dakota (ND)</option>
+                        <option value="OH">Ohio (OH)</option>
+                        <option value="OK">Oklahoma (OK)</option>
+                        <option value="OR">Oregon (OR)</option>
+                        <option value="PA">Pennsylvania (PA)</option>
+                        <option value="RI">Rhode Island (RI)</option>
+                        <option value="SC">South Carolina (SC)</option>
+                        <option value="SD">South Dakota (SD)</option>
+                        <option value="TN">Tennessee (TN)</option>
+                        <option value="TX">Texas (TX)</option>
+                        <option value="UT">Utah (UT)</option>
+                        <option value="VT">Vermont (VT)</option>
+                        <option value="VA">Virginia (VA)</option>
+                        <option value="WA">Washington (WA)</option>
+                        <option value="WV">West Virginia (WV)</option>
+                        <option value="WI">Wisconsin (WI)</option>
+                        <option value="WY">Wyoming (WY)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="geo-location">
+                <label>Want us to auto-detect your location? Check here<input type="checkbox" id="auto-detect"></label>
+            </div>
+            <div class="buttons">
+                <button type="button" type="submit" id="submit">SUBMIT</button>
+                <button type="button" id="clearButton">CLEAR</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Card Container -->
+    <div class="weather-card-container">
+        <div id="weather-card" class="weather-card">
+            <!-- Weather card content will be injected here -->
+        </div>
+    </div>
+
+    <!-- Forecast Table Container -->
+    <div class="forecast-table-container">
+        <table id="forecast-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Temp High</th>
+                    <th>Temp Low</th>
+                    <th>Wind Speed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Forecast rows will be injected here -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Daily Weather Details Container (Initially Hidden) -->
+    <div id="daily-details" class="daily-weather-details">
+        <h2>Daily Weather Details</h2>
+        <div id="daily-card" class="weather-card">
+            <!-- Detailed weather content will be inserted here dynamically -->
+            <h1>Daily card should appear here</h1>
+        </div>
+    </div>
+    
+
+    <div class="results">
+        <h1></h1>
+    </div>
+
+    
+
+
+
+
+<div class="charts-container" id="charts-container">
+    <figure class="highcharts-figure">
+        <div id="container" style="padding-bottom:4rem;"></div>
+    </figure>
+
+    <figure class="highcharts-figure2">
+        <div id="container2"></div>
+    </figure>
+</div>
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/windbarb.js"></script>
+
+
+
+
+<script src="/script.js"></script>
+
+    <!-- Reference the JS file from the same folder -->
+</body>
+</html>
